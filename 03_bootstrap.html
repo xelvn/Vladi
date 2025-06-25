@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Completo con Bootstrap para Profesores</title>
+    <!-- 
+    Explicación: 
+    Enlazamos el archivo CSS de Bootstrap desde el CDN para no tener que descargarlo localmente.
+    Esto es útil para facilitar el acceso a estilos responsivos en un entorno educativo.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!--
+    Explicación:
+    La clase `container` en Bootstrap es fundamental para crear diseños centrados y responsivos.
+    Asegura que el contenido esté dentro de los márgenes automáticos y se ajuste al tamaño de la pantalla.
+    -->
+    <div class="container mt-5">
+        <h1 class="text-center">Bienvenido a Bootstrap</h1>
+        <!--
+        - `text-center`: Alinea el texto al centro.
+        - `mt-5`: Añade un margen superior de 5 unidades (aproximadamente 3rem).
+        -->
+
+        <p class="lead text-muted text-center">
+            Bootstrap es un potente framework CSS que permite crear sitios web responsivos y móviles con facilidad. 
+            En este ejercicio, veremos cómo usar algunos de sus componentes más importantes.
+        </p>
+        <!--
+        - `lead`: Estilo para destacar texto importante con un tamaño ligeramente más grande.
+        - `text-muted`: Aplica un color de texto más tenue.
+        - `text-center`: Alinea el texto al centro.
+        -->
+
+        <!--
+        Ejemplo de botones en Bootstrap
+        -->
+        <section>
+            <h2 class="mt-4">Botones con Bootstrap</h2>
+            <p>Aquí se muestran algunos estilos predefinidos de botones en Bootstrap:</p>
+
+            <!--
+            Bootstrap facilita la creación de botones estilizados:
+            - `btn`: Clase base para aplicar el estilo básico de botón.
+            - `btn-primary`: Botón de color azul predeterminado.
+            - Otros estilos incluyen: `btn-secondary`, `btn-success`, `btn-danger`.
+            -->
+            <button class="btn btn-primary">Botón Primario</button>
+            <button class="btn btn-secondary">Botón Secundario</button>
+            <button class="btn btn-success">Botón de Éxito</button>
+            <button class="btn btn-danger">Botón de Peligro</button>
+        </section>
+
+        <!--
+        Formularios con Bootstrap
+        -->
+        <section>
+            <h2 class="mt-5">Formularios en Bootstrap</h2>
+            <form>
+                <!--
+                El sistema de formularios de Bootstrap permite un diseño uniforme:
+                - `form-control`: Clase para aplicar un estilo consistente a los campos de texto.
+                - `form-label`: Clase que estiliza los elementos <label> de los formularios.
+                -->
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="pais" class="form-label">País:</label>
+                    <select class="form-select" id="pais">
+                        <option value="españa">España</option>
+                        <option value="mexico">México</option>
+                        <option value="argentina">Argentina</option>
+                    </select>
+                </div>
+
+                <!--
+                El botón de envío utiliza la clase `btn` y `btn-primary` para darle el estilo de Bootstrap.
+                -->
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+
+        <!--
+        Tablas con Bootstrap
+        -->
+        <section>
+            <h2 class="mt-5">Tablas en Bootstrap</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Manzanas</td>
+                        <td>2.00€</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Pan</td>
+                        <td>1.50€</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--
+            - `table`: Aplica el estilo básico de tabla.
+            - `table-striped`: Alterna el color de las filas para mejorar la legibilidad.
+            -->
+        </section>
+
+        <!--
+        Alertas en Bootstrap
+        -->
+        <section>
+            <h2 class="mt-5">Alertas en Bootstrap</h2>
+            <!-- 
+            Bootstrap permite crear alertas visuales con las clases `alert`, `alert-success`, `alert-danger`, entre otras. 
+            -->
+            <div class="alert alert-success" role="alert">
+                Esta es una alerta de éxito.
+            </div>
+            <div class="alert alert-danger" role="alert">
+                Esta es una alerta de error.
+            </div>
+        </section>
+
+        <!--
+        Carrusel de Bootstrap
+        -->
+        <section>
+            <h2 class="mt-5">Carrusel de Imágenes</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src=".\images\1Ejercito.png" class="d-block w-20" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src=".\images\1aguila.png" class="d-block w-20" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src=".\images\1ACLOG.png" class="d-block w-20" alt="Imagen 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            <!--
+            - `carousel`: Componente que permite crear un carrusel de imágenes.
+            - `carousel-indicators`: Añade indicadores para cambiar entre las imágenes.
+            - `carousel-control-prev`, `carousel-control-next`: Añade controles de navegación.
+            -->
+        </section>
+    </div>
+
+    <!-- 
+    Bootstrap requiere incluir el archivo JavaScript al final del documento para que funcione correctamente, 
+    especialmente si se usan componentes como el carrusel. 
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
