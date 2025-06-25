@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clase </title>
+  <!--
+    📚 Práctica Completa de HTML
+    Autor: Joaquín Rodríguez Llanes
+    Fecha: 23/04/2025
+
+    Objetivo:
+    - Repasar la estructura semántica de una página HTML
+    - Conocer y practicar etiquetas fundamentales
+    - Entender dónde y cómo enriquecer cada sección
+    - Dejar preparado para mejorar y personalizar
+  -->
+</head>
+<body>
+
+  <!-- ================================================
+       HEADER: CABECERA PRINCIPAL 
+       Semántica: <header> agrupa elementos introductorios
+       Practica: Cambia el texto del título y añade un logo con <img>
+  ================================================ -->
+  <header>
+    <!-- Título principal de la página -->
+    <h1>🌐 Mi Página Web de Práctica</h1>
+    <!-- Subtítulo o eslogan -->
+    <p>Aprendiendo HTML paso a paso con Joaquín</p>
+     <p>Aprendiendo HTML paso a paso con Joaquín</p>
+    <!-- Practica: Inserta aquí un logotipo usando <img src="ruta" alt="Logo"> -->
+  </header>
+
+  <!-- ================================================
+       NAV: NAVEGACIÓN PRINCIPAL
+       Semántica: <nav> para menús de navegación
+       Practica: Añade más enlaces, prueba enlaces relativos y absolutos
+  ================================================ -->
+  <nav>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <!-- Practica: Aplica aria-label al <nav> para accesibilidad -->
+  </nav>
+
+  <!-- ================================================
+       MAIN: CONTENIDO PRINCIPAL
+       Semántica: <main> solo un bloque principal por página
+  ================================================ -->
+  <main>
+
+    <!-- -----------------------------
+         SECCIÓN: Sobre mí
+         ID para anclas y estilo
+         Practica: Cambia <section> por <article> y observa la semántica
+    ------------------------------ -->
+    <section id="sobre-mi">
+      <h2>👤 Sobre mí</h2>
+      <p>
+        ¡Hola! Soy <strong>Nombre del Alumno</strong>, estudiante de programación.
+        En esta sección escribes tu presentación personal.
+      </p>
+      <!-- Practica: Añade un enlace a tu perfil de GitHub con <a> -->
+    </section>
+
+    <!-- -----------------------------
+         SECCIÓN: Habilidades
+         Demuestra uso de listas ordenadas y desordenadas
+         Practica: Cambia el orden de la lista y añade iconos con emoji o <i>
+    ------------------------------ -->
+    <section id="habilidades">
+      <h2>💪 Mis Habilidades</h2>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+      <ul>
+        <li>Visual Studio Code</li>
+        <li>Live Server</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- -----------------------------
+         SECCIÓN: Proyectos
+         Uso de <figure> y <figcaption> para imágenes con descripción
+         Practica: Añade más <figure> con tus propias capturas
+    ------------------------------ -->
+    <section id="proyectos">
+      <h2>📂 Proyectos Destacados</h2>
+
+      <figure>
+        <img src="data:image/jpeg;base64,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" alt="Proyecto 1">
+        <figcaption>Proyecto 1: Página de Portafolio</figcaption>
+      </figure>
+
+      <figure>
+        <img src="" alt="Proyecto 2">
+        <figcaption>Proyecto 2: App de Tareas</figcaption>
+      </figure>
+
+      <!-- Practica: Experimenta cambiando el tamaño de las imágenes -->
+    </section>
+
+    <!-- -----------------------------
+         SECCIÓN: Galería
+         Práctica de <picture> y <source> para imágenes responsivas
+         Practica: Sustituye por <picture> con diferentes resoluciones
+    ------------------------------ -->
+    <section id="galeria">
+      <h2>📸 Galería de Imágenes</h2>
+      <picture>
+        <source media="(max-width: 600px)" srcset="https://via.placeholder.com/200">
+        <img src="https://via.placeholder.com/600" alt="Imagen responsiva">
+      </picture>
+    </section>
+
+    <!-- -----------------------------
+         SECCIÓN: Tabla de horarios
+         Tablas: <table>, <thead>, <tbody>, <tr>, <th>, <td>
+         Practica: Añade una columna extra con comentarios
+    ------------------------------ -->
+    <section id="horario">
+      <h2>📊 Mi Horario de Estudio</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Día</th>
+            <th>Actividad</th>
+            <th>Duración</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes</td>
+            <td>Repaso de Java</td>
+            <td>1.5h</td>
+          </tr>
+           <tr>
+            <td>Martes</td>
+            <td>Ejercicios de HTML</td>
+            <td>2h</td>
+          </tr>
+          <tr>
+            <td>Miércoles</td>
+            <td>Ejercicios de HTML</td>
+            <td>2h</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- -----------------------------
+         SECCIÓN: Formulario de contacto
+         Formularios: <form>, <label>, <input>, <textarea>, <button>
+         Practica: Cambia el método a POST y la acción a tu servidor de prueba
+    ------------------------------ -->
+    <section id="contacto">
+      <h2>📬 Contáctame</h2>
+      <form action="#" method="get">
+        <div>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        </div>
+        <div>
+          <label for="apellido">Apellido:</label><br>
+          <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
+        </div>
+        <div>
+          <label for="email">Correo:</label><br>
+          <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com">
+        </div>
+        <div>
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+        </div>
+        <!-- Botón de envío -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER: PIE DE PÁGINA
+       Semántica: <footer> con información legal y enlaces secundarios
+       Practica: Añade enlaces a redes sociales con iconos
+  ================================================ -->
+  <footer>
+    <p>© 2025 Página creada por Nombre del Alumno</p>
+    <p><a href="#inicio">Volver arriba</a></p>
+  </footer>
+
+  <!-- ================================================
+       MEJORAS Y EXTENSIONES
+       Sección con ideas para profundizar
+  ================================================ -->
+  <!--
+    🛠️ Mejoras adicionales que puedes aplicar:
+    1. Añadir CSS externo para estilos (colores, tipografías, diseño responsivo).
+    2. Integrar Bootstrap o Tailwind para componentes predefinidos.
+    3. Usar JavaScript para validar el formulario antes de enviar.
+    4. Agregar metaetiquetas SEO (description, keywords).
+    5. Implementar etiquetas ARIA para accesibilidad.
+    6. Añadir un favicon y mejorar la cabecera (<link rel="icon">).
+    7. Dividir contenido en <div class="container"> y secciones con clases para CSS.
+    8. Incluir un menú hamburguesa para móvil con JavaScript.
+    9. Usar librerías de iconos (FontAwesome, Material Icons).
+    10. Practicar con <video> y <audio> para medios integrados.
+  -->
+
+</body>
+</html>
