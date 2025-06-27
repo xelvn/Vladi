@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio para Alumnos: Gestión de Equipos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1 class="display-4">Gestión de Equipos en la Red</h1>
+            <p class="lead">Agrega y elimina equipos de la lista, y muestra alertas al usuario.</p>
+        </header>
+
+        <!-- Sección para agregar equipos -->
+        <section id="agregar-equipos" class="mb-5">
+            <div class="card p-4 shadow">
+                <h2>Agregar Equipo</h2>
+                <div class="form-group">
+                    <label for="equipo">Nombre del equipo:</label>
+                    <input type="text" id="equipo" class="form-control" placeholder="Introduce el nombre del equipo">
+                </div>
+                <!-- Botón para agregar equipo -->
+                <button class="btn btn-primary btn-block" onclick="agregarEquipo()">Agregar equipo</button>
+            </div>
+        </section>
+
+        <!-- Lista de equipos -->
+        <section class="mb-5">
+            <div class="card p-4 shadow">
+                <h3>Lista de Equipos:</h3>
+                <ul id="lista-equipos" class="list-group">
+                    <!-- Los equipos se agregarán dinámicamente aquí -->
+                </ul>
+                <!-- Botón para eliminar equipo -->
+                <button class="btn btn-danger btn-block mt-3" onclick="eliminarEquipo()">Eliminar último equipo</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript (Bootstrap y lógica) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Array para almacenar los nombres de los equipos
+        let equipos = [];
+
+        // Función para agregar un equipo
+        function agregarEquipo() {
+            // 1. Obtener el nombre del equipo desde el campo de texto
+            // Ejemplo para "mascotas": const nombreMascota = document.getElementById("mascota").value;
+
+            // 2. Verificar que el campo no esté vacío
+            // - Si no está vacío:
+            //     - Agrega el nombre del equipo al array "equipos"
+            //     - Llama a la función mostrarEquipos para actualizar la lista visualmente
+            //     - Limpia el campo de texto
+            // - Si está vacío, muestra un mensaje de alerta para indicar que el nombre es necesario
+
+            // Ejemplo para "mascotas":
+            /*
+            if (nombreMascota) {
+                mascotas.push(nombreMascota);  // Agrega la mascota al array
+                mostrarMascotas();  // Actualiza la lista visualmente
+                document.getElementById("mascota").value = "";  // Limpia el campo
+            } else {
+                alert("Por favor, introduce un nombre de mascota.");
+            }
+            */
+        }
+
+        // Función para mostrar la lista de equipos
+        function mostrarEquipos() {
+            // 1. Obtener el elemento HTML donde se mostrará la lista de equipos
+            // Ejemplo: const lista = document.getElementById("lista-mascotas");
+
+            // 2. Limpiar el contenido de la lista para evitar duplicados
+            // Ejemplo: lista.innerHTML = "";
+
+            // 3. Usar un bucle (forEach) para recorrer el array "equipos"
+            // - Para cada equipo en el array, crea un elemento de lista (li) con el nombre del equipo
+            // - Agrega cada elemento de lista al HTML de la lista
+
+            // Ejemplo para "mascotas":
+            /*
+            mascotas.forEach((mascota) => {
+                let mascotaItem = `<li>${mascota}</li>`;  // Crear elemento de lista
+                lista.innerHTML += mascotaItem;  // Agregar elemento a la lista HTML
+            });
+            */
+        }
+
+        // Función para eliminar el último equipo de la lista
+        function eliminarEquipo() {
+            // 1. Verificar si hay equipos en el array "equipos"
+            // - Si hay, elimina el último equipo del array con "pop"
+            // - Llama a mostrarEquipos para actualizar la lista
+            // - Muestra un mensaje de alerta con el equipo eliminado
+            // - Si no hay equipos, muestra una alerta indicando que la lista está vacía
+
+            // Ejemplo para "mascotas":
+            /*
+            if (mascotas.length > 0) {
+                let mascotaEliminada = mascotas.pop();  // Elimina la última mascota
+                mostrarMascotas();  // Actualiza la lista
+                alert(`Se ha eliminado la mascota: ${mascotaEliminada}`);
+            } else {
+                alert("La lista de mascotas está vacía.");
+            }
+            */
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio para Alumnos: Gestión de Equipos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1 class="display-4">Gestión de Equipos en la Red</h1>
+            <p class="lead">Agrega y elimina equipos de la lista, y muestra alertas al usuario.</p>
+        </header>
+
+        <!-- Sección para agregar equipos -->
+        <section id="agregar-equipos" class="mb-5">
+            <div class="card p-4 shadow">
+                <h2>Agregar Equipo</h2>
+                <div class="form-group">
+                    <label for="equipo">Nombre del equipo:</label>
+                    <input type="text" id="equipo" class="form-control" placeholder="Introduce el nombre del equipo">
+                </div>
+                <!-- Botón para agregar equipo -->
+                <button class="btn btn-primary btn-block" onclick="agregarEquipo()">Agregar equipo</button>
+            </div>
+        </section>
+
+        <!-- Lista de equipos -->
+        <section class="mb-5">
+            <div class="card p-4 shadow">
+                <h3>Lista de Equipos:</h3>
+                <ul id="lista-equipos" class="list-group">
+                    <!-- Los equipos se agregarán dinámicamente aquí -->
+                </ul>
+                <!-- Botón para eliminar equipo -->
+                <button class="btn btn-danger btn-block mt-3" onclick="eliminarEquipo()">Eliminar último equipo</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript (Bootstrap y lógica) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Array para almacenar los nombres de los equipos
+        let equipos = [];
+
+        // Función para agregar un equipo
+        function agregarEquipo() {
+            // 1. Obtener el nombre del equipo desde el campo de texto
+            const nombreEquipo = document.getElementById("equipo").value;
+
+            // 2. Verificar que el campo no esté vacío
+            if (nombreEquipo) {
+                // Agregar el nombre del equipo al array "equipos"
+                equipos.push(nombreEquipo);
+
+                // Llamar a la función mostrarEquipos para actualizar la lista visualmente
+                mostrarEquipos();
+
+                // Limpiar el campo de texto después de agregar el equipo
+                document.getElementById("equipo").value = "";
+            } else {
+                // Si el campo está vacío, muestra una alerta al usuario
+                alert("Por favor, introduce un nombre de equipo.");
+            }
+        }
+
+        // Función para mostrar la lista de equipos
+        function mostrarEquipos() {
+            // 1. Obtener el elemento HTML donde se mostrará la lista de equipos
+            const lista = document.getElementById("lista-equipos");
+
+            // 2. Limpiar el contenido de la lista para evitar duplicados
+            lista.innerHTML = "";
+
+            // 3. Recorrer el array "equipos" y agregar cada equipo a la lista
+            equipos.forEach((equipo) => {
+                // Crear un elemento de lista (li) con el nombre del equipo
+                let equipoItem = `<li class="list-group-item">${equipo}</li>`;
+                
+                // Agregar el elemento de lista al HTML de "lista-equipos"
+                lista.innerHTML += equipoItem;
+            });
+        }
+
+        // Función para eliminar el último equipo de la lista
+        function eliminarEquipo() {
+            // Verificar si hay equipos en el array "equipos"
+            if (equipos.length > 0) {
+                // Eliminar el último equipo del array con "pop"
+                let equipoEliminado = equipos.pop();
+
+                // Llamar a mostrarEquipos para actualizar la lista visualmente
+                mostrarEquipos();
+
+                // Mostrar una alerta con el nombre del equipo eliminado
+                alert(`Se ha eliminado el equipo: ${equipoEliminado}`);
+            } else {
+                // Si no hay equipos, mostrar una alerta indicando que la lista está vacía
+                alert("No hay equipos en la lista para eliminar.");
+            }
+        }
+    </script>
+</body>
+</html>
